@@ -32,9 +32,11 @@ Main compound types are:
 On slices:
 - You can think of a slice as a reference to a variable or a subsection of a variable.
 - You can create a slice from another variable as:
-  `let my_string: String = "Halleluja!".to_string();`
-  `let slice_a: &str = &my_string;`
-  `let slice_b: &str = &my_string[0..5];`
+  ```
+  let my_string: String = "Halleluja!".to_string();
+  let slice_a: &str = &my_string;
+  let slice_b: &str = &my_string[0..5];
+  ```
 
 On functions:
 - They start with the `fn` keyword:
@@ -45,22 +47,28 @@ On functions:
 - Arguments are in the `name: type` format and comma separated:
   `fn my_function(length: f32, width: f32) {`
 - Return type is specified as ` -> type` as:
-  `fn add(a: f32, b: f32) -> f32 {`
-  `  return a + b;`
-  `}`
+  ```
+  fn add(a: f32, b: f32) -> f32 {
+    return a + b;
+  }
+  ```
   -or-
-  `fn add(a: f32, b: f32) -> f32 {`
-  `  a + b` <-- Will return the result of the function's last line because we didn't put the semicolon.
-  `}`
+  ```
+  fn add(a: f32, b: f32) -> f32 {
+    a + b  // Will return the result of the function's last line because we didn't put the semicolon.
+  }
+  ```
 - You can define a lambda function as:
-  `fn my_function(length: f32, width: f32) {`
-  `  let my_lambda = {`
-  `    let inner_x: i32 = 10;`
-  `    let inner_y: i32 = 9;`
-  `    inner_x * inner_y`
-  `  };`
-  `  println!("Length {}, width {}, inner {}", length, width, my_lambda);`
-  `}`
+  ```
+  fn my_function(length: f32, width: f32) {
+    let my_lambda = {
+      let inner_x: i32 = 10;
+      let inner_y: i32 = 9;
+      inner_x * inner_y
+    };
+    println!("Length {}, width {}, inner {}", length, width, my_lambda);
+  }
+  ```
 
 On naming conventions:
 - Function names are `snake_case`
